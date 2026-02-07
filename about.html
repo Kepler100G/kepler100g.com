@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – Kepler-100G Canada</title>
+    <meta content="About Kepler-100G Canada" property="og:title" />
+    <meta content="Discover Kepler-100G Canada, a creative and imaginative government-style website project." property="og:description" />
+    <meta content="https://toadvillebay.com/about.html" property="og:url" />
+    <meta content="https://kepler-100g.com/Images and Videos/KeplerIcon.png" property="og:image" />
+    <link rel="icon" type="image/png" href="./Images and Videos/KeplerIcon.png" />
+    <link rel="apple-touch-icon" href="./Images and Videos/KeplerIcon.png" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .profile-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, var(--tvb-surface-alt), white);
+        }
+
+        .profile-images {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--tvb-primary);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            overflow: hidden;
+            background: white;
+            animation: gentle-bounce 3s ease-in-out infinite;
+        }
+
+        .profile-image:nth-child(2) {
+            animation-delay: 1.5s;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 2.5em;
+            color: var(--tvb-primary);
+            margin-bottom: 10px;
+        }
+
+        .profile-title {
+            font-size: 1.2em;
+            color: var(--tvb-text);
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .profile-bio {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            color: var(--tvb-text);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .about-card {
+            background: rgb(0, 0, 0);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .about-card h2 {
+            color: var(--tvb-primary);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .about-card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: var(--tvb-text);
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--tvb-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 15px;
+        }
+
+        .cta-button:hover {
+            background: var(--tvb-primary-dark);
+            transform: scale(1.05);
+        }
+
+        .legal-section {
+            background: var(--tvb-surface-alt);
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .legal-card {
+            background: rgb(0, 0, 0);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .legal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .legal-card h3 {
+            color: var(--tvb-primary);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .legal-card p {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: var(--tvb-text);
+            opacity: 0.9;
+        }
+
+        .legal-card .cta-button {
+            background: var(--tvb-primary);
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            display: inline-block;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .legal-card .cta-button:hover {
+            background: var(--tvb-primary-dark);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2em;
+            }
+
+            .about-card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="site-header__top">
+            <a class="site-brand" href="/index.html">
+                <img src="Images and Videos/KeplerIcon.png" alt="Kepler-100G Canada" class="brand-mark" />
+                <span class="brand-text">Kepler-100G</span>
+            </a>
+            <div class="site-utils">
+                <form class="site-search" role="search" aria-label="Site search" onsubmit="handleSearch(event)">
+                    <label for="q" class="sr-only">Search Kepler-100G</label>
+                    <input id="q" name="q" type="search" placeholder="Search Kepler-100G" />
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="profile-section">
+        <div class="profile-images">
+            <div class="profile-image">
+                <img src="Images and Videos/KeplerIcon.png" alt="Kepler-100G Icon" />
+            </div>
+        </div>
+        <h1 class="profile-name">The Kepler-100G Community</h1>
+        <p class="profile-title">A collaborative worldbuilding project by dedicated creators worldwide</p>
+        <p class="profile-bio">
+            Kepler-100G is built by a diverse community of worldbuilders, writers, artists, designers, and developers from around the globe. Founded with a vision to create an inclusive and accessible creative space, Kepler-100G thrives through the contributions and collaboration of its members. Whether you're crafting stories in ToadVille Bay, designing innovations for Progressia, or celebrating culture in the Union of Blueland, you're part of a shared creative universe. This project combines passion for worldbuilding with a commitment to making collaborative creativity accessible and welcoming to all.
+        </p>
+    </section>
+
+
+    <script src="scripts/site-search.js"></script>
+</body>
+</html>
+    </section>
+
+    <main class="about-container">
+        <div class="about-grid">
+            <div class="about-card">
+                <h2>What is Kepler-100G</h2>
+                <p>
+                    Kepler-100G is a collaborative worldbuilding project and fictional universe. It features three main nations—ToadVille Bay, Progressia, and the Union of Blueland—each with their own rich histories, cultures, and characters. This community project invites creators to contribute stories, characters, and ideas to the expanding Kepler-100G universe.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h2>About This Project</h2>
+                <p>
+                    Kepler-100G.com serves as the central hub for the community. This website showcases the worldbuilding efforts of our members and provides resources for those interested in participating. Whether you're a writer, artist, or simply a fan of collaborative creativity, you'll find opportunities to contribute and connect with the community.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h2>Mission & Vision</h2>
+                <p>
+                   The Kepler-100G community is dedicated to creative collaboration, inclusive worldbuilding, and celebrating diverse perspectives. We believe in the power of collective storytelling and aim to create a welcoming space where all members can share their creativity, grow as creators, and help shape a shared fictional universe.
+                </p>
+            </div>
+        </div>
+
+        <section class="legal-section">
+            <div class="about-container">
+                <div class="legal-grid">
+                    <div class="legal-card">
+                        <h3>Privacy policy</h3>
+                        <p>Learn how information is handled and how privacy is protected in this demonstration project.</p>
+                        <a href="Legal/privacy.html" class="cta-button">Read the policy</a>
+                    </div>
+
+                    <div class="legal-card">
+                        <h3>Terms of use</h3>
+                        <p>Understand the terms that govern use of the website.</p>
+                        <a href="Legal/termsofservice.html" class="cta-button">View the terms</a>
+                    </div>
+
+                    <div class="legal-card">
+                        <h3>Community guidelines</h3>
+                        <p>Read the community standards and participation expectations.</p>
+                        <a href="Legal/communityguidelines.html" class="cta-button">Read the rules</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="footer-brand-img" src="./Images and Videos/KeplerIcon.png" alt="Kepler-100G" />
+      </div>
+      <div class="footer-links-columns">
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Our community</a></li>
+            <li><a href="#">How to join</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Rules</a></li>
+            <li><a href="#">Withdraw from Kepler-100G</a></li>
+          </ul>
+        </div>
+        <div class="site-footer-brand" style="grid-column: 1 / -1; text-align:center;">
+          <span class="site-footer-text">© Kepler-100G 2024-2026</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="scripts/site-search.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Kepler-100G)</title>
+    <meta content="Welcome to Kepler-100G Canada (English)" property="og:title" />
+    <meta content="Official government website of Kepler-100G – Immigration, citizenship, businesses and community services." property="og:description" />
+    <meta content="https://kepler-100g.com/" property="og:url" />
+    <meta content="https://kepler-100g.com/Images and Videos/KeplerIcon.png" property="og:image" />
+    <meta content="#0066CC" data-react-helmet="true" name="theme-color" />
+    <link rel="icon" type="image/png" href="./Images and Videos/KeplerIcon.png" />
+    <link rel="apple-touch-icon" href="./Images and Videos/KeplerIcon.png" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing">
+    <div class="container">
+        <main class="landing-content" role="main">
+            <div class="header">
+                <img class="site-flag" src="Images and Videos/KeplerIcon.png" alt="Kepler-100G Flag" />
+                <h1 class="site-title">Welcome to the Kepler-100G</h1>
+            </div>
+
+            <nav class="navigation-buttons" role="navigation">
+                <button class="nav-btn secondary" onclick="navigateTo('./home.html')">
+                    Enter site
+                </button>
+                <div class="secondary-nav">
+                    <button class="nav-btn secondary" onclick="navigateTo('https://discord.gg/Xku925Bfs5')">
+                        Discord
+                    </button>
+                    <button class="nav-btn secondary" onclick="navigateTo('./about.html')">
+                        About
+                    </button>
+                </div>
+            </nav>
+
+            <footer class="landing-footer">
+                <p class="landing-description">
+                    Worldbuilding via community effort.
+                </p>
+                <div class="landing-copyright">
+                    © Kepler-100G 2024–<span id="current-year"></span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Update copyright year automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('current-year').textContent = currentYear;
+        });
+
+        // Navigation function for buttons
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
+

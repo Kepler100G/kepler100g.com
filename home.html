@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kepler-100G – Welcome</title>
+  <meta content="Kepler-100G – Welcome" property="og:title" />
+  <meta content="Find programs, services and information for residents and newcomers to Kepler-100G." property="og:description" />
+  <meta content="https://kepler-100g.com/" property="og:url" />
+  <meta content="https://kepler-100g.com/Images and Videos/KeplerIcon.png" property="og:image" />
+  <meta content="#0066CC" data-react-helmet="true" name="theme-color" />
+  <link rel="icon" type="image/png" href="./Images and Videos/KeplerIcon.png" />
+  <link rel="apple-touch-icon" href="./Images and Videos/KeplerIcon.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    /* Page-scoped background (English/en.html only) */
+    .sun-bg {
+      position: relative;
+      min-height: 100vh;
+    }
+    .sun-bg::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.10; /* subtle watermark */
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Ensure content renders above the decorative background */
+    .sun-bg .site-header,
+    .sun-bg .hero,
+    .sun-bg .page-content,
+    .sun-bg .site-footer { position: relative; z-index: 1; }
+  </style>
+</head>
+<body class="sun-bg">
+  <!-- En-tête global -->
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <a class="site-brand" href="/index.html">
+        <img src="./Images and Videos/KeplerIcon.png" alt="Kepler-100G" class="brand-mark" />
+        <span class="brand-text">Kepler-100G</span>
+      </a>
+      <div class="site-utils">
+        <form class="site-search" role="search" aria-label="Recherche sur le site" onsubmit="handleSearch(event)">
+          <label for="q" class="sr-only">Search</label>
+          <input id="q" name="q" type="search" placeholder="Search Kepler-100G" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bannière d’accueil -->
+  <section class="hero" aria-label="Welcome">
+    <div class="hero__content">
+      <h1>Welcome to the <i>Kepler-100G</i></h1>
+      <p>Welcome to the Kepler-100G community website, a collaborative effort to build a fictional world.</p>
+      <a class="btn-primary" href="#services">Browse services</a>
+    </div>
+  </section>
+
+  <!-- Grille des sujets / services -->
+  <main class="page-content">
+    <section id="programs" class="most-requested" aria-labelledby="mr-title">
+      <h2 id="mr-title">Pinned</h2>
+      <ul class="link-list">
+        <li><a href="./Countries/progressia.html">Progressia</a></li>
+        <li><a href="./Countries/toadvillebay.html">ToadVille Bay</a></li>
+        <li><a href="./Countries/union-of-blueland.html">Union of Blue Land</a></li>
+        <li><a href="about.html">About Kepler-100G</a></li>
+        <li><a href="./join.html">How to Join</a></li>
+      </ul>
+    </section>
+  
+    <section id="services" class="card-grid" aria-labelledby="services-title">
+      <h2 id="services-title">Services and information</h2>
+      <div class="grid">
+        <a class="card" href="./Countries/countries.html" aria-label="Countries">
+          <h3>Countries</h3>
+          <p>View the nations within Kepler-100G.</p>
+        </a>
+        <a class="card" href="./about.html" aria-label="About">
+          <h3>About Us</h3>
+          <p>Learn about the Kepler-100G community.</p>
+        </a>
+        <a class="card" href="./Countries/countries.html" aria-label="Explore">
+          <h3>Explore</h3>
+          <p>Discover the Kepler-100G universe.</p>
+        </a>
+        <a class="card" href="./rules.html" aria-label="Rules">
+          <h3>Community Rules</h3>
+          <p>Read the guidelines for participation.</p>
+        </a>
+        <a class="card" href="./join.html" aria-label="Join">
+          <h3>Join the Community</h3>
+          <p>Become part of Kepler-100G.</p>
+        </a>
+        </a>
+      </div>
+    </section>
+
+    <section id="news" class="news" aria-labelledby="news-title">
+    </section>
+  </main>
+
+  <!-- Pied de page global -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="footer-brand-img" src="./Images and Videos/KeplerIcon.png" alt="Kepler-100G" />
+      </div>
+      <div class="footer-links-columns">
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Our community</a></li>
+            <li><a href="#">How to join</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Rules</a></li>
+            <li><a href="#">Withdraw from Kepler-100G</a></li>
+          </ul>
+        </div>
+        <div class="site-footer-brand" style="grid-column: 1 / -1; text-align:center;">
+          <span class="site-footer-text">© Kepler-100G 2024-2026</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./scripts/site-search.js"></script>
+</body>
+</html>
+
